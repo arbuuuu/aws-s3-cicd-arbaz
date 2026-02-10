@@ -3,63 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arbaz CI/CD Pipeline</title>
+    <title>Arbaz DevOps Automation</title>
     <style>
         body {
-            background-color: #0f172a; /* Deep Blue/Black */
-            color: #ffffff;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             height: 100vh;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         .container {
-            text-align: center;
-            border: 2px solid #3b82f6; /* Blue Border */
+            background: rgba(255, 255, 255, 0.1);
             padding: 40px;
-            border-radius: 15px;
-            background-color: #1e293b;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            max-width: 500px;
         }
         h1 {
-            color: #22c55e; /* Green for Success */
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .status {
+            background-color: #00c853; /* Bright Green */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            animation: pulse 2s infinite;
         }
         p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-        }
-        .badge {
-            background-color: #f59e0b; /* AWS Orange */
-            color: black;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            color: #e0e0e0;
             margin-top: 15px;
-            display: inline-block;
+            line-height: 1.6;
         }
-        .pulse {
-            animation: pulse-animation 2s infinite;
-        }
-        @keyframes pulse-animation {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 200, 83, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
         }
     </style>
 </head>
 <body>
 
-    <div class="container pulse">
-        <h1>✅ Automation Success!</h1>
+    <div class="container">
+        <h1>🚀 Mission Accomplished!</h1>
         <p>This website was deployed automatically by <b>AWS CodePipeline</b>.</p>
-        <div class="badge">🚀 CI/CD Pipeline Active</div>
-        <p style="margin-top: 20px; font-size: 0.9rem;">(I did not upload this file manually)</p>
+        <p>I did not upload this file manually. I just pushed code to GitHub.</p>
+        
+        <div class="status">
+            ✅ CI/CD System: ONLINE
+        </div>
     </div>
 
 </body>
